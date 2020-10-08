@@ -1,6 +1,4 @@
-// To parse this JSON data, do
-//
-//     final user = userFromJson(jsonString);
+/*This model is usefull when you need to transfer a response to an object, so you can do whatever you want with this data all across your app*/
 
 import 'dart:convert';
 

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider_example/app/routes.dart';
 import 'package:provider_example/ui/views/main_view.dart';
+/*In this file you must write the entire code for your rutes, remember that you can put some parameteres if you want.
+Routes can be MaterialPageRoute or CupertinoPageRoute, you can use both in Android or IOs because the only diference is the animation that you will see bettween views. */
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {

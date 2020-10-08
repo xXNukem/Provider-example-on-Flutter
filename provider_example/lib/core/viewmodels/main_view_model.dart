@@ -4,6 +4,7 @@ import 'package:provider_example/core/models/user.dart';
 import 'package:provider_example/core/services/api.dart';
 import 'package:provider_example/core/viewmodels/base_model.dart';
 
+/*This viewmodel belongs to mainview*/
 class MainViewModel extends BaseModel {
   Api _api = locator<Api>();
 

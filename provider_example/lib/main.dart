@@ -20,9 +20,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      //Starting navigation services and routing
       navigatorKey: locator<NavigationService>().navigationKey,
       onGenerateRoute: Router.generateRoute,
-      initialRoute: mainViewRoute,
+      initialRoute:
+          mainViewRoute, //First view that will be shown when you launch your app
     );
   }
 }
