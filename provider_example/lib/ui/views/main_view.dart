@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider_example/app/routes.dart';
 import 'package:provider_example/app/viewstate.dart';
 import 'package:provider_example/core/viewmodels/main_view_model.dart';
 import 'package:provider_example/ui/views/base_view.dart';
+import 'package:provider_example/ui/views/user_profile_view.dart';
 
 class MainView extends StatefulWidget {
   @override
@@ -25,7 +27,7 @@ class _MainViewState extends State<MainView> {
               padding: const EdgeInsets.only(top: 24),
               child: model.state == ViewState.Busy
                   ? CircularProgressIndicator()
-                  : FlatButton(
+                  : RaisedButton(
                       onPressed: () {
                         model.getUsersFromApi();
                       },
@@ -40,10 +42,11 @@ class _MainViewState extends State<MainView> {
                         itemBuilder: (_, index) {
                           return Column(
                             children: [
-                              FlatButton(
+                              RaisedButton(
                                 onPressed: () {
-                                  model.getUserPostFromApi(
-                                      model.userList[index].id);
+                                  Navigator.of(context).pushNamed(
+                                      userProfileViewRoute,
+                                      arguments: model.userList[index]);
                                 },
                                 child: Text(
                                   model.userList[index].nombre.toString(),

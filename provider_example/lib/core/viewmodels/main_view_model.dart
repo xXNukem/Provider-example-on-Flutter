@@ -16,11 +16,4 @@ class MainViewModel extends BaseModel {
     setState(ViewState.Idle);
     print(userList);
   }
-
-  Future<bool> getUserPostFromApi(int userID) async {
-    setState(ViewState.Busy);
-
-    setState(ViewState.Idle);
-    return true;
-  }
 }
